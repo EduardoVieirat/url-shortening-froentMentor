@@ -1,0 +1,61 @@
+.main-section {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-section div {
+    margin-left: 130px;
+}
+
+.presentation-section {
+    height: 100%;
+    width: 550px;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.presentation-section h1 {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.presentation-section p {
+    width: 100%;
+    font-size: 19px;
+    font-weight: 600;
+
+    color: var(--font-color-text);
+}
+
+.presentation-section button {
+    background-color: var(--btn-bg-color-hover);
+    
+    width: 200px;
+    height: 60px;
+
+    border: none;
+    border-radius: 40px;
+
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.image {
+    height: 600px;
+    width: 800px;
+
+    background-image: url('../../assets/illustration-working.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
