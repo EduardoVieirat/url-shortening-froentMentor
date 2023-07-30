@@ -13,8 +13,17 @@
     background-image: url('../../assets/bg-shorten-desktop.svg');
     background-size: cover;
     background-position: center;
+}
 
-    /* padding: 0 5rem; */
+.shortner-section div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 60%;
+
+    gap: 0.5rem;
 }
 
 .input-shortner, .btn-shortner, .shortner-section {
@@ -29,7 +38,7 @@
 }
 
 .input-shortner {
-    width: 60%;
+    width: 100%;
 
     padding: 1rem 1.5rem;
 
@@ -45,6 +54,18 @@
 
     background-color: var(--btn-bg-color-hover);
 
+}
+
+.error-alert {
+    border: 3px solid #f46262;
+}
+
+.error-message {
+    color: #f46262;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 700;
+
+    align-self: start;
 }
 
 @media (max-width: 991.98px) { 
@@ -67,4 +88,4 @@
     .input-shortner,.btn-shortner {
         width: 80%;
     }
- }
+}
