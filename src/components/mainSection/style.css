@@ -1,36 +1,31 @@
 .main-section {
     height: 100%;
-    width: 100%;
+    width: 90%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.main-section div {
-    margin-left: 130px;
-}
-
 .presentation-section {
     height: 100%;
-    width: 550px;
+    width: 80%;
 
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
 
-    gap: 10px;
+    gap: 1rem;
 }
 
 .presentation-section h1 {
     font-weight: 700;
-    font-size: 70px;
+    font-size: clamp(1.9rem, 5vw, 7rem);
 }
 
 .presentation-section p {
-    width: 100%;
-    font-size: 19px;
+    font-size: 2rem;
     font-weight: 600;
 
     color: var(--font-color-text);
@@ -39,23 +34,45 @@
 .presentation-section button {
     background-color: var(--btn-bg-color-hover);
     
-    width: 200px;
-    height: 60px;
+    width: 20rem;
+    height: 6rem;
 
     border: none;
-    border-radius: 40px;
+    border-radius: 4rem;
 
-    font-size: 19px;
+    font-size: clamp(1rem, 4vw, 2rem);
     font-weight: 700;
     color: #fff;
 }
 
 .image {
-    height: 600px;
-    width: 800px;
+    height: 50rem;
+    width: 40rem;
 
     background-image: url('../../assets/illustration-working.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column-reverse;
+    }
+
+    .presentation-section p {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .presentation-section p {
+        font-size: 1.5rem;
+    }
+
+    .presentation-section button {
+        width: 14rem;
+        height: 5rem;
+    }
 }
