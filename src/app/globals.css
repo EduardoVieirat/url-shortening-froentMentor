@@ -2,10 +2,19 @@
   --font-color-text: #9e9aa7;
   --btn-bg-color-hover: #2acfcf;
   --font-color-hover:  #232127;
+  --bg-color-menu: #3b3054;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-size: 1.6rem;
 }
