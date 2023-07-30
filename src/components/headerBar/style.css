@@ -1,61 +1,115 @@
 .header-shotly {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 10rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
-    color: var(--font-color-text);
-    font-weight: 700;
+  color: var(--font-color-text);
+  font-weight: 700;
+
+  padding: 0 5rem;
+
+  border: 1px solid red;
 }
 
-.header-shotly div {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-    margin: 0 100px;
-}
-
-.logo-nav-bar {
-    width: 550px;
-}
-
-.logo-nav-bar nav ul {
-    display: flex;
-    list-style: none;
-}
-
-.logo-nav-bar nav ul li {
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.logo-nav-bar nav ul li:hover {
-    color: var(--font-color-hover);
-}
-
+.nav-bar,
 .button-section {
-    width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  width: 80%;
+}
+
+.nav-bar nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar nav ul li {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.nav-bar nav ul li:hover {
+  color: var(--font-color-hover);
 }
 
 .button-section button {
-    width: 130px;
-    height: 50px;
-    
-    border-radius: 40px;
-    border: none;
-    background-color: #fff;
-    
-    color: var(--font-color-text);
-    font-weight: 700;
-    font-size: 17px;
-    
-    cursor: pointer;
+  width: 12rem;
+  height: 5rem;
+
+  border-radius: 4rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+
+  color: var(--font-color-text);
+  font-weight: 700;
+  font-size: clamp(0.8rem, 10vw, 1.7rem);
+
+  cursor: pointer;
 }
 
 .button-section button:hover {
-    background-color: var(--btn-bg-color-hover);
+  background-color: var(--btn-bg-color-hover);
+  color: #fff;
+}
+
+.btn-show-nav-bar {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+
+  .nav-bar-responsive {
+    position: absolute;
+    top: 10rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  
+    border-radius: 1rem;
+    height: 35rem;
+    width: 30rem;
+  
+    background-color: var(--bg-color-menu);
+  }
+  
+  .nav-bar-responsive nav ul, .nav-bar-responsive .button-section  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+    gap: 1.5rem;
+  
     color: #fff;
+  
+    height: 15rem;
+  }
+  .btn-show-nav-bar {
+    display: block;
+  }
+
+  .button-section {
+    border-top: 1px solid gray;
+  }
+
+  .button-section button {
+
+
+    width: 25rem;
+
+    color: #fff;
+  }
 }

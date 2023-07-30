@@ -1,28 +1,45 @@
-import Image from 'next/image'
-import logoImg from '../../assets/logo.svg'
-import './style.css'
+"use client";
+
+import Image from "next/image";
+import logoImg from "../../assets/logo.svg";
+import "./style.css";
+import { useState } from "react";
 
 export default function Header() {
-    
-    return (
-        <header className="header-shotly">
-            <div className='logo-nav-bar'>
-                <Image src={logoImg} alt='Logo Image' width={200}/>
+  const [showMenu, setShowMenu] = useState(false);
+  
+  
 
-                <nav>
-                    <ul>
-                        <li>Features</li>
-                        <li>Princing</li>
-                        <li>Recources</li>
-                    </ul>
-                </nav>
-            </div>
+  return (
+    <header className="header-shotly">
+      <Image
+        src={logoImg}
+        alt="Logo Image"
+        className="image-logo"
+        width={150}
+      />
 
-            <div className='button-section'>
-                <button>Login</button>
-                <button>Sign Up</button>
-            </div>
+      <div className={`nav-bar ${showMenu && 'nav-bar-responsive'}`}>
+        <nav>
+          <ul>
+            <li>Features</li>
+            <li>Princing</li>
+            <li>Recources</li>
+          </ul>
+        </nav>
 
-        </header>
-    )
+        <div className="button-section">
+          <button>Login</button>
+          <button>Sign Up</button>
+        </div>
+      </div>
+
+      <div
+        className="btn-show-nav-bar"
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        menu
+      </div>
+    </header>
+  );
 }
