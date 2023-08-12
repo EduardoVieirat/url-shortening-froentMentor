@@ -5,11 +5,12 @@
   align-items: center;
 
   min-height: 100vh;
-  min-width: 100%;
+  min-width: 100vw;
 }
 
 @media (max-width: 540px) {
   .main {
+    width: 100%;
     justify-content: space-around;
   }  
 }
