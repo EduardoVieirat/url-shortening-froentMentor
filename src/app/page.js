@@ -6,6 +6,7 @@ import "./style.css";
 import { useState } from "react";
 import api from "@/api/api";
 import FooterBar from "@/components/footerBar";
+import BoostSection from "@/components/BoostSection/boostSection";
 
 export default function Home() {
   const [urlToShort, setUrlToShort] = useState("");
@@ -59,9 +60,10 @@ export default function Home() {
 
       <section></section>
 
-      <section className="boost-section"></section>
-
-      <FooterBar/>
+      <div className="bottom-section">
+        <BoostSection />
+        <FooterBar />
+      </div>
     </main>
   );
 }
