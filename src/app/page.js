@@ -3,21 +3,26 @@ import Header from "@/components/headerBar/header";
 import MainSection from "@/components/mainSection/main";
 import Shortner from "@/components/shortnerUrlsection/shortner";
 import "./style.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import api from "@/api/api";
 import FooterBar from "@/components/footerBar";
 import BoostSection from "@/components/BoostSection/boostSection";
+import { UrlContext } from "@/context/context";
 
 export default function Home() {
-  const [urlToShort, setUrlToShort] = useState("");
+  const { urlToShort, urlShorted, setUrlShorted } = useContext(UrlContext);
+
   const [errorMessage, setErrorMessage] = useState("");
 
   async function HandleUrlShortner() {
     try {
-      const responseUrl = await api.post(`shorten?url=${urlToShort}`);
+      const responseUrl = await api.post(`/shorten?url=${urlToShort}`);
 
-      console.log(responseUrl.data);
+      const url = responseUrl.data.result;
+
+      await setUrlShorted({ ...url });
     } catch (error) {
+      console.log(error.response);
       const { error_code } = error.response.data;
 
       error_code == 1 && setErrorMessage("Parâmetro da Url está vazio");
@@ -50,13 +55,13 @@ export default function Home() {
       <Header />
       <MainSection />
       <Shortner
-        urlToShort={urlToShort}
-        setUrlToShort={setUrlToShort}
         HandleUrlShortner={HandleUrlShortner}
         errorMessage={errorMessage}
       />
 
-      <section className="shortened-links"></section>
+      <section className="shortened-links">{urlShorted.code && <>
+        <span>{urlShorted.short_link}</span>
+      </>}</section>
 
       <section></section>
 
