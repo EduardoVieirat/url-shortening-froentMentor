@@ -14,7 +14,7 @@ export default function MainSection() {
           links are performing.
         </p>
 
-        <button>Get Starded</button>
+        <button style={{cursor: 'pointer'}}>Get Starded</button>
       </div>
       <div className="image" />
     </section>
