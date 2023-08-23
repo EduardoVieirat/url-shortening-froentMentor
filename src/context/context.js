@@ -1,16 +1,18 @@
-import UrlProvider from "@/hooks/urlProvider";
-import  { createContext } from ("react");
+"use client";
 
-const UserContext = createContext([])
+import UrlHooks from "@/hooks/UrlHooks";
+import { createContext } from "react";
 
-export function UserProvider({ children }) {
-    const urlProvider = UrlProvider();
+export const UrlContext = createContext([]);
 
-    return (
-        <UserContext.Provider value={urlProvider}>
-            {children}
-        </UserContext.Provider>
-    )
+export default function UrlProvider({ children }) {
+  const { urlToShort, setUrlToShort, urlShorted, setUrlShorted } = UrlHooks();
+
+  return (
+    <UrlContext.Provider
+      value={{ urlToShort, setUrlToShort, urlShorted, setUrlShorted }}
+    >
+      {children}
+    </UrlContext.Provider>
+  );
 }
-
-export default UserContext;
