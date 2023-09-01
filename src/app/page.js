@@ -21,6 +21,7 @@ export default function Home() {
 
       const url = responseUrl.data.result;
 
+      setErrorMessage("");
       await setUrlShorted({ ...url });
     } catch (error) {
       console.log(error.response);
