@@ -7,8 +7,6 @@ import { useState } from "react";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
-  
-  
 
   return (
     <header className="header-shotly">
@@ -19,7 +17,7 @@ export default function Header() {
         width={150}
       />
 
-      <div className={`nav-bar ${showMenu && 'nav-bar-responsive'}`}>
+      <div className={`nav-bar ${showMenu && "nav-bar-responsive"}`}>
         <nav>
           <ul>
             <li>Features</li>
@@ -34,11 +32,10 @@ export default function Header() {
         </div>
       </div>
 
-      <div
-        className="btn-show-nav-bar"
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        menu
+      <div className="btn-show-nav-bar" onClick={() => setShowMenu(!showMenu)}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
     </header>
   );

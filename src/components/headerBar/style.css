@@ -10,7 +10,6 @@
   font-weight: 700;
 
   padding: 0 5rem;
-  
 }
 
 .nav-bar,
@@ -77,28 +76,44 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-  
+
     border-radius: 1rem;
     height: 35rem;
     width: 30rem;
-  
+
     background-color: var(--bg-color-menu);
   }
-  
-  .nav-bar-responsive nav ul, .nav-bar-responsive .button-section  {
+
+  .nav-bar-responsive nav ul,
+  .nav-bar-responsive .button-section {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-  
+
     gap: 1.5rem;
-  
+
     color: #fff;
-  
+
     height: 15rem;
   }
   .btn-show-nav-bar {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 4rem;
+    height: 0.4rem;
+
+    background-color: #9e9aa7;
   }
 
   .button-section {
