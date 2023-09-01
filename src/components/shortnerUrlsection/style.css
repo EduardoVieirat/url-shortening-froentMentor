@@ -76,14 +76,14 @@
   align-self: center;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 991.98px) {  
   .input-shortner,
   .btn-shortner {
     font-size: 1.5rem;
   }
 
   .input-shortner {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -93,6 +93,11 @@
 
     flex-direction: column;
     background-image: url("../../assets/bg-shorten-mobile.svg");
+  }
+
+  .shortner-section div {
+    height: 70%;
+    flex-direction: column;
   }
 
   .input-shortner,

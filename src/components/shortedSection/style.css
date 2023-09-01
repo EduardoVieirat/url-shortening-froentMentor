@@ -17,15 +17,15 @@
 .shorted-links div {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .shorted-links span {
   font-weight: 500;
 }
 
-.shorted-links div span {
+.shorted-links div span:last-child {
   color: #2acfcf;
 }
 
@@ -46,4 +46,26 @@
 
 .copied {
   background-color: hsl(257, 27%, 26%);
+}
+
+@media (max-width: 878px) {
+  .shorted-links, .shorted-links div {
+
+    gap: 1rem;
+
+    flex-direction: column;
+  }
+
+  .shorted-links {
+    height: 15rem;
+  
+    justify-content: center;
+  
+    gap: 3rem;
+  }
+
+  .button-copy {
+    width: 100%;
+  }
+
 }
