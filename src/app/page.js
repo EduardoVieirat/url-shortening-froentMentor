@@ -8,6 +8,7 @@ import api from "@/api/api";
 import FooterBar from "@/components/footerBar";
 import BoostSection from "@/components/BoostSection/boostSection";
 import { UrlContext } from "@/context/context";
+import ShortedSection from "@/components/shortedSection/shorted";
 
 export default function Home() {
   const { urlToShort, urlShorted, setUrlShorted } = useContext(UrlContext);
@@ -54,16 +55,22 @@ export default function Home() {
     <main className="main">
       <Header />
       <MainSection />
-      <Shortner
-        HandleUrlShortner={HandleUrlShortner}
-        errorMessage={errorMessage}
-      />
 
-      <section className="shortened-links">{urlShorted.code && <>
-        <span>{urlShorted.short_link}</span>
-      </>}</section>
+      <section className="gray-section">
+        <Shortner
+          HandleUrlShortner={HandleUrlShortner}
+          errorMessage={errorMessage}
+        />
 
-      <section></section>
+        {urlShorted.code && (
+          <>
+            <ShortedSection
+              original_link={urlShorted.original_link}
+              full_short_link={urlShorted.full_short_link}
+            />
+          </>
+        )}
+      </section>
 
       <div className="bottom-section">
         <BoostSection />

@@ -1,0 +1,49 @@
+.shorted-links {
+  width: 70%;
+  height: 6rem;
+
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 3rem;
+  margin: 3rem 0;
+
+  border-radius: 0.5rem;
+}
+
+.shorted-links div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.shorted-links span {
+  font-weight: 500;
+}
+
+.shorted-links div span {
+  color: #2acfcf;
+}
+
+.button-copy {
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  color: #fff;
+  height: 3.5rem;
+  width: 10rem;
+
+  border: none;
+  background-color: #2acfcf;
+}
+
+.copied {
+  background-color: hsl(257, 27%, 26%);
+}

@@ -33,7 +33,7 @@ export default function Shortner({ HandleUrlShortner, errorMessage }) {
 
   return (
     <section className="shortner-section">
-      <div>
+   
         <input
           onChange={handleInput}
           className={`input-shortner ${errorMessage !== "" && "error-alert"}`}
@@ -45,7 +45,7 @@ export default function Shortner({ HandleUrlShortner, errorMessage }) {
         {errorMessage !== "" && (
           <span className="error-message">{errorMessage}</span>
         )}
-      </div>
+     
 
       <button className="btn-shortner" onClick={() => HandleUrlShortner()}>
         Shorten It!
