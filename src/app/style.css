@@ -12,9 +12,19 @@
   width: 100%;
 }
 
+.gray-section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #d2d1d188;
+}
+
 @media (max-width: 540px) {
   .main {
-    width: 100%;
     justify-content: space-around;
   }  
 }

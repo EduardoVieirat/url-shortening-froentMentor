@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 898px) {
   .nav-bar {
     display: none;
   }
@@ -71,7 +71,8 @@
   .nav-bar-responsive {
     position: absolute;
     top: 10rem;
-    
+    right: 5rem;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -105,8 +106,6 @@
   }
 
   .button-section button {
-
-
     width: 25rem;
 
     color: #fff;

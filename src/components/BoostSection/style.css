@@ -7,8 +7,6 @@
   justify-content: center;
   flex-direction: column;
 
-  margin-top: 10rem;
-
   gap: 1.5rem;
   background-image: url("../../assets/bg-boost-desktop.svg");
   color: #fff;
