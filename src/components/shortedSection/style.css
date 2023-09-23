@@ -1,6 +1,6 @@
 .shorted-links {
   width: 70%;
-  height: 6rem;
+  min-height: 6rem;
 
   background-color: #fff;
 
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 3rem;
+  padding: 0.5rem 3rem;
   margin: 3rem 0;
 
   border-radius: 0.5rem;
@@ -23,6 +23,7 @@
 
 .shorted-links span {
   font-weight: 500;
+  font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
 .shorted-links div span:last-child {
@@ -49,23 +50,22 @@
 }
 
 @media (max-width: 878px) {
-  .shorted-links, .shorted-links div {
-
+  .shorted-links,
+  .shorted-links div {
     gap: 1rem;
 
     flex-direction: column;
   }
 
   .shorted-links {
-    height: 15rem;
-  
+    height: 20  rem;
+
     justify-content: center;
-  
+
     gap: 3rem;
   }
 
   .button-copy {
     width: 100%;
   }
-
 }

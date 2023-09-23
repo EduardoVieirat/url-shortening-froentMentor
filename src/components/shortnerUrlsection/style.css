@@ -2,19 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-direction: column;
 
-  margin: 0 1rem;
-
-  margin-top: -6rem;
-  margin-bottom: 2rem;
   padding: 2rem;
+  margin: 5rem 0;
 
   gap: 1rem;
 
   width: 70%;
-  height: 12rem;
+  min-height: 12rem;
 
   background-color: #3b3054;
   background-image: url("../../assets/bg-shorten-desktop.svg");
@@ -76,7 +72,7 @@
   align-self: center;
 }
 
-@media (max-width: 991.98px) {  
+@media (max-width: 991.98px) {
   .input-shortner,
   .btn-shortner {
     font-size: 1.5rem;
