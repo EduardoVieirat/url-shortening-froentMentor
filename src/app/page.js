@@ -9,6 +9,7 @@ import FooterBar from "@/components/footerBar";
 import BoostSection from "@/components/BoostSection/boostSection";
 import { UrlContext } from "@/context/context";
 import ShortedSection from "@/components/shortedSection/shorted";
+import AdvancedStatistc from "@/components/advancedStatistc";
 
 export default function Home() {
   const { urlToShort, urlShorted, setUrlShorted } = useContext(UrlContext);
@@ -71,6 +72,8 @@ export default function Home() {
             />
           </>
         )}
+
+        <AdvancedStatistc />
       </section>
 
       <div className="bottom-section">
