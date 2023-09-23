@@ -18,3 +18,9 @@ html {
 body {
   font-size: 1.6rem;
 }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
