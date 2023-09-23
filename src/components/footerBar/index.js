@@ -30,17 +30,18 @@ export default function FooterBar() {
         <div>
           <h4>Resources</h4>
           <ul>
-            <li>Link Shortening</li>
-            <li>Branded Links</li>
-            <li>Analytics</li>
+            <li>Blog</li>
+            <li>Developers</li>
+            <li>Support</li>
           </ul>
         </div>
         <div>
           <h4>Company</h4>
           <ul>
-            <li>Link Shortening</li>
-            <li>Branded Links</li>
-            <li>Analytics</li>
+            <li>About</li>
+            <li>Our team</li>
+            <li>Careers</li>
+            <li>Contact</li>
           </ul>
         </div>
       </section>
