@@ -21,9 +21,9 @@
   width: 100%;
 }
 
-.shorted-links span {
+.shorted-links div span {
   font-weight: 500;
-  font-size: clamp(1rem, 3vw, 1.8rem);
+  font-size: clamp(1rem, 3vw, 1.6rem);
 }
 
 .shorted-links div span:last-child {
@@ -58,7 +58,7 @@
   }
 
   .shorted-links {
-    height: 20  rem;
+    height: 20 rem;
 
     justify-content: center;
 
