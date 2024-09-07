@@ -1,7 +1,5 @@
 #  URL Shortening FrontEnd Mentor 
 
-## Challange of <a href='https://www.frontendmentor.io'>FrontEnd Mentor</a>
-
 _Este projeto consiste em um App React que usa uma API para fazer encurtar links._
 
 ### Tecnologias usadas
@@ -16,3 +14,5 @@ _Este projeto consiste em um App React que usa uma API para fazer encurtar links
 
 #### Tela após solicitar a contação em dinheiro
 -->
+
+#### inspirado no desafio do <a href='https://www.frontendmentor.io'>FrontEnd Mentor</a>
