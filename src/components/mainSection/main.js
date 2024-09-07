@@ -8,7 +8,9 @@ export default function MainSection() {
 
         <p>Make your links short with highest performance </p>
 
-        <button style={{ cursor: "pointer" }}>Get Starded</button>
+        <button style={{ cursor: "pointer" }}>
+          <a href="#shortnerSection">Get Starded</a>
+        </button>
       </div>
       <div className="image" />
     </section>

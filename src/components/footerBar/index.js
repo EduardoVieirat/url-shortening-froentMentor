@@ -1,5 +1,5 @@
 import logoImg from "../../assets/logo-2.svg";
-import iconFacebook from "../../assets/icon-facebook.svg";
+// import iconFacebook from "../../assets/icon-facebook.svg";
 
 import "./style.css";
 import Image from "next/image";
@@ -15,7 +15,7 @@ export default function FooterBar() {
       />
 
       <section className="social-media">
-        <Image src={iconFacebook} alt="" />
+        {/* <Image src={iconFacebook} alt="icon" /> */}
       </section>
     </footer>
   );

@@ -16,22 +16,6 @@ export default function Header() {
         className="image-logo"
         width={150}
       />
-
-      <div className={`nav-bar ${showMenu && "nav-bar-responsive"}`}>
-        <nav>
-          <ul>
-            <li>Features</li>
-            <li>Princing</li>
-            <li>Recources</li>
-          </ul>
-        </nav>
-      </div>
-
-      <div className="btn-show-nav-bar" onClick={() => setShowMenu(!showMenu)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
     </header>
   );
 }

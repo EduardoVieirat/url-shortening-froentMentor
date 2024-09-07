@@ -6,7 +6,6 @@ import FooterBar from "@/components/footerBar";
 import { UrlContext } from "@/context/context";
 import Header from "@/components/headerBar/header";
 import MainSection from "@/components/mainSection/main";
-import AdvancedStatistc from "@/components/advancedStatistc";
 import Shortner from "@/components/shortnerUrlsection/shortner";
 import ShortedSection from "@/components/shortedSection/shorted";
 import BoostSection from "@/components/BoostSection/boostSection";
@@ -42,8 +41,6 @@ export default function Home() {
             <ShortedSection />
           </>
         )}
-
-        <AdvancedStatistc />
       </section>
 
       <div className="bottom-section">

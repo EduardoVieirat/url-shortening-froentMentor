@@ -26,7 +26,7 @@ export default function Shortner({ HandleUrlShortner }) {
 
   return (
     <UrlProvider>
-      <section className="shortner-section">
+      <section className="shortner-section" id="shortnerSection">
         <div>
           <input
             onChange={handleInput}

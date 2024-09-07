@@ -47,6 +47,11 @@
   color: #fff;
 }
 
+.presentation-section button a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .image {
   height: 50rem;
   width: 40rem;
