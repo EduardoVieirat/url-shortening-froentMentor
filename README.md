@@ -10,7 +10,7 @@ _Este projeto consiste em um App React que usa uma API para fazer encurtar links
 - <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
 
 #### Tela Inicial
-![preview](/images-readme/home-page.png)
+![preview](/image-readme/home-page.png)
 <!-- 
 #### Tela após solicitar a contação em dinheiro
 
