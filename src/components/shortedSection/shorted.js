@@ -1,27 +1,33 @@
-import { useState } from "react";
 import "./style.css";
+import { useContext, useState } from "react";
+import UrlProvider, { UrlContext } from "@/context/context";
 
-export default function ShortedSection({ original_link, full_short_link }) {
+export default function ShortedSection() {
+  const { urlShorted } = useContext(UrlContext);
+
   const [isCopied, setIsCopied] = useState(false);
+  function copyToClipBoard() {
+    console.log(urlShorted.shortUrl);
 
-  function copyToClipBoard(event) {
-    navigator.clipboard.writeText(full_short_link);
+    navigator.clipboard.writeText(urlShorted.shortUrl);
     setIsCopied(true);
   }
 
   return (
-    <section className="shorted-links">
-      <div>
-        <span>{original_link}</span>
+    <UrlProvider>
+      <section className="shorted-links">
+        <div>
+          <span>{urlShorted.originalLink}</span>
 
-        <span>{full_short_link}</span>
-      </div>
-      <button
-        className={`button-copy ${isCopied && "copied"}`}
-        onClick={copyToClipBoard}
-      >
-        {isCopied ? "Copied!" : "Copy"}
-      </button>
-    </section>
+          <span>{urlShorted.shortUrl}</span>
+        </div>
+        <button
+          className={`button-copy ${isCopied && "copied"}`}
+          onClick={copyToClipBoard}
+        >
+          {isCopied ? "Copied!" : "Copy"}
+        </button>
+      </section>
+    </UrlProvider>
   );
 }
