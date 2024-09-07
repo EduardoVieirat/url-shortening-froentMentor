@@ -25,11 +25,6 @@ export default function Header() {
             <li>Recources</li>
           </ul>
         </nav>
-
-        <div className="button-section">
-          <button>Login</button>
-          <button>Sign Up</button>
-        </div>
       </div>
 
       <div className="btn-show-nav-bar" onClick={() => setShowMenu(!showMenu)}>
